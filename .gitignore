@@ -1,0 +1,25 @@
+git --version
+```
+
+---
+
+## 2. Create a `.gitignore` file
+In your project root `C:\Users\shant\OneDrive\Desktop\mp\`, create a file named `.gitignore`:
+```
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.sav
+venv/
+env/
+
+# Node
+node_modules/
+build/
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

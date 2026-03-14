@@ -28,13 +28,9 @@ import joblib
 import pandas as pd
 import numpy as np
 import sys
-from fastapi.staticfiles import
-
-
 sys.path.insert(0, ".")
-
 app = FastAPI(title="MediPredict API", version="2.0.0")
-app.mount("/static", StaticFiles(directory="medipredict/build"), name="frontend")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],

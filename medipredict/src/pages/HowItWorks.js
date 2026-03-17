@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 
 import { T } from "../components/UIComponents";
-import { DISEASES } from "../constants";
 
 function StepCard({ n, icon, title, desc, color, detail }) {
   const [open, setOpen] = useState(false);

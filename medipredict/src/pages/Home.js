@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { T } from "../components/UIComponents";
 import { DISEASES } from "../constants";
-import { Brain, Zap, Database, Apple, Server, Activity } from "lucide-react";
+import { Brain, Zap, Database, Server, Activity } from "lucide-react";
 import { Stethoscope } from "lucide-react";
 
 // ── Animated counter ──────────────────────────────────────────────────────────

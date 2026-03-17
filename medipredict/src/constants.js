@@ -84,4 +84,4 @@ export const DISEASES = [
   }
 ];
 
-export const API_BASE = "https://medipredict-2.onrender.com/";
+export const API_BASE = "https://medipredict-2.onrender.com";

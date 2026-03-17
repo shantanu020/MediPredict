@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { T } from "../components/UIComponents";
 import { DISEASES } from "../constants";
+import { Brain, Zap, Database, Apple, Server, Activity } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 
 // ── Animated counter ──────────────────────────────────────────────────────────
 function Counter({ target, suffix="" }) {
@@ -119,6 +121,7 @@ function FeatureCard({ icon, title, desc, color, tags, delay }) {
         display: "flex", alignItems: "center", justifyContent: "center",
         fontSize: "20px",
       }}>{icon}</div>
+      
       <div style={{
         fontFamily: T.fontDisp, fontWeight: 700, fontSize: "15px",
         color: T.textPri, letterSpacing: "0.5px", marginBottom: "8px",
@@ -182,32 +185,35 @@ export default function Home({ setCurrentPage, setActiveDisease, handleDiseaseCh
 
   const features = [
     {
-      icon: "◈", title: "9 ML Prediction Models", color: T.teal,
+      icon: <Activity size={20} />,
+      title: "9 ML Prediction Models", color: T.teal,
       desc: "Trained RandomForest, SVC, and GradientBoosting models across diabetes, heart disease, Parkinson's, liver, hepatitis, lung cancer, chronic kidney, breast cancer, and general symptom prediction.",
       tags: ["RandomForest", "SVC", "GradientBoosting", "scikit-learn"],
     },
     {
-      icon: "🧠", title: "Groq LLM Second Opinion", color: "#a29bfe",
+      
+      icon: <Brain size={20} />,
+      title: "Groq LLM Second Opinion", color: "#a29bfe",
       desc: "After every prediction, llama-3.3-70b generates a structured clinical second opinion — differential diagnosis, specialist referral, recommended tests, and lifestyle advice.",
       tags: ["llama-3.3-70b", "Groq API", "Clinical Reasoning"],
     },
     {
-      icon: "◉", title: "RAG Symptom Analysis", color: T.amber,
+      icon: <Database size={20} />, title: "RAG Symptom Analysis", color: T.amber,
       desc: "The Symptom Checker uses a FAISS vectorstore built from 3 medical CSVs (descriptions, precautions, severity weights) to ground every LLM response in real data.",
       tags: ["FAISS", "LangChain", "sentence-transformers", "RAG"],
     },
     {
-      icon: "✦", title: "Personalized Diet Plans", color: T.green,
+      icon: <Server size={20} />, title: "Personalized Diet Plans", color: T.green,
       desc: "Post-prediction, the AI generates condition-specific nutrition guidance — foods to eat, foods to avoid, key nutrients, and daily meal tips tailored to the diagnosed condition.",
       tags: ["Nutrition AI", "Groq", "Personalized"],
     },
     {
-      icon: "⚡", title: "FastAPI Backend", color: "#fd9644",
+      icon: <Zap size={20} />, title: "FastAPI Backend", color: "#fd9644",
       desc: "A production-grade Python backend with 11 REST endpoints, Pydantic input validation, and automatic Swagger docs. All 9 models load at startup and serve predictions in milliseconds.",
       tags: ["FastAPI", "Python", "Uvicorn", "Swagger"],
     },
     {
-      icon: "◎", title: "Real-Time Differential Diagnosis", color: "#ff6b6b",
+       icon: <Stethoscope size={20} />, title: "Real-Time Differential Diagnosis", color: "#ff6b6b",
       desc: "Every prediction returns the top condition plus up to 3 differential alternatives with probability scores — giving a complete probabilistic picture rather than a single binary answer.",
       tags: ["Probability Scores", "Alternatives", "Differential Dx"],
     },

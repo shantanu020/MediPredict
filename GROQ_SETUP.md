@@ -168,5 +168,5 @@ POST /predict/symptoms/groq-enhanced?api_key=YOUR_API_KEY
 
 Check the main README.md or review the code in:
 
-- `Frontend/api.py` - Backend endpoints
+- `backend/api.py` - Backend endpoints
 - `medipredict/src/App.js` - Frontend integration

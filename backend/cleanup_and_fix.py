@@ -1,9 +1,9 @@
 """
 cleanup_and_fix.py
 ==================
-Run this from inside the Frontend/ folder:
+Run this from inside the backend/ folder:
 
-    cd Frontend
+    cd backend
     python cleanup_and_fix.py
 
 What it does:
@@ -16,7 +16,7 @@ What it does:
 import os
 import shutil
 
-ROOT = os.path.dirname(os.path.abspath(__file__))  # Frontend/ folder
+ROOT = os.path.dirname(os.path.abspath(__file__))  # backend/ folder
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. DELETE UNNECESSARY FILES & FOLDERS
@@ -203,7 +203,7 @@ else:
 
 print("  Ideal final structure:")
 print("""
-  Frontend/
+  backend/
   ├── app.py
   ├── retrain_all_models.py
   ├── requirements.txt

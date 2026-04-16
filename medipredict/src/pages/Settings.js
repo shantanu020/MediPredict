@@ -104,7 +104,7 @@ export default function Settings({ groqKey, setGroqKey }) {
         <div style={{padding:"20px"}}>
           {[
             {step:"01", title:"Get Free Groq Key", body:"Visit console.groq.com, sign up, and generate an API key. Free tier includes generous usage limits."},
-            {step:"02", title:"Start FastAPI Backend", body:"cd Frontend && python api.py — server starts at http://localhost:8000"},
+            {step:"02", title:"Start FastAPI Backend", body:"cd backend && python api.py — server starts at http://localhost:8000"},
             {step:"03", title:"Enter Key Above", body:"Paste your gsk_… key into the field above to unlock AI second opinions, diet plans, and RAG analysis."},
             {step:"04", title:"Run Predictions", body:"Navigate to Predictors, select a disease module, fill in the clinical data, and click the predict button."},
           ].map((s,i)=>(

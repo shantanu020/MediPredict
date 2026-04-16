@@ -1,9 +1,9 @@
 """
 retrain_all_models.py
 =====================
-Run this script from inside the  Frontend/  folder:
+Run this script from inside the  backend/  folder:
 
-    cd Frontend
+    cd backend
     python retrain_all_models.py
 
 It will:

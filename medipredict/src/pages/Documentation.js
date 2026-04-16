@@ -242,7 +242,7 @@ export default function Documentation() {
               </div>
             </Section>
             <Section title="Start Backend" badge="TERMINAL">
-              <Step n="1" title="Navigate to the Frontend directory">Go to your project's <code style={{ fontFamily: T.fontMono, fontSize: "11px", color: T.teal, background: T.bg3, padding: "1px 5px", borderRadius: "3px" }}>Frontend/</code> folder where <code style={{ fontFamily: T.fontMono, fontSize: "11px", color: T.teal, background: T.bg3, padding: "1px 5px", borderRadius: "3px" }}>api.py</code> lives.</Step>
+              <Step n="1" title="Navigate to the backend directory">Go to your project's <code style={{ fontFamily: T.fontMono, fontSize: "11px", color: T.teal, background: T.bg3, padding: "1px 5px", borderRadius: "3px" }}>backend/</code> folder where <code style={{ fontFamily: T.fontMono, fontSize: "11px", color: T.teal, background: T.bg3, padding: "1px 5px", borderRadius: "3px" }}>api.py</code> lives.</Step>
               <Step n="2" title="Install Python dependencies">
                 <CodeBlock code={`pip install fastapi uvicorn scikit-learn pandas numpy groq\npip install langchain langchain-community faiss-cpu sentence-transformers`} />
               </Step>
@@ -271,13 +271,13 @@ export default function Documentation() {
               <CodeBlock code={`# Core\npip install fastapi uvicorn pandas numpy scikit-learn joblib\n\n# AI / LLM\npip install groq\n\n# RAG Chain\npip install langchain langchain-community faiss-cpu sentence-transformers torch\n\n# Optional: retrain models\npip install xgboost`} />
             </Section>
             <Section title="Project File Structure" badge="REQUIRED FILES">
-              <CodeBlock code={`Frontend/\n├── api.py                      ← FastAPI backend (11 endpoints)\n├── retrain_all_models.py\n├── code/\n│   ├── DiseaseModel.py\n│   ├── helper.py\n│   └── train.py\n├── data/\n│   ├── symptom_Description.csv   ← RAG source\n│   ├── symptom_precaution.csv    ← RAG source\n│   ├── Symptom-severity.csv      ← RAG source\n│   └── clean_dataset.tsv\n├── model/\n│   ├── xgboost_model.sav         ← Symptom model\n│   └── label_encoder.sav\n└── models/\n    ├── diabetes_model.sav\n    ├── heart_disease_model.sav\n    ├── parkinsons_model.sav\n    ├── liver_model.sav\n    ├── hepititisc_model.sav\n    ├── lung_cancer_model.sav\n    ├── chronic_model.sav\n    └── breast_cancer.sav`} />
+              <CodeBlock code={`backend/\n├── api.py                      ← FastAPI backend (11 endpoints)\n├── retrain_all_models.py\n├── code/\n│   ├── DiseaseModel.py\n│   ├── helper.py\n│   └── train.py\n├── data/\n│   ├── symptom_Description.csv   ← RAG source\n│   ├── symptom_precaution.csv    ← RAG source\n│   ├── Symptom-severity.csv      ← RAG source\n│   └── clean_dataset.tsv\n├── model/\n│   ├── xgboost_model.sav         ← Symptom model\n│   └── label_encoder.sav\n└── models/\n    ├── diabetes_model.sav\n    ├── heart_disease_model.sav\n    ├── parkinsons_model.sav\n    ├── liver_model.sav\n    ├── hepititisc_model.sav\n    ├── lung_cancer_model.sav\n    ├── chronic_model.sav\n    └── breast_cancer.sav`} />
             </Section>
             <Section title="Retrain Models" badge="OPTIONAL">
               <p style={{ fontFamily: T.fontBody, fontSize: "12px", color: T.textSec, lineHeight: 1.65, marginBottom: "12px" }}>To retrain all 8 binary disease models from scratch:</p>
-              <CodeBlock code={`cd Frontend\npython retrain_all_models.py`} />
+              <CodeBlock code={`cd backend\npython retrain_all_models.py`} />
               <p style={{ fontFamily: T.fontBody, fontSize: "12px", color: T.textSec, lineHeight: 1.65, marginTop: "8px" }}>To retrain the symptom checker model:</p>
-              <CodeBlock code={`cd Frontend\npython code/train.py`} />
+              <CodeBlock code={`cd backend\npython code/train.py`} />
             </Section>
           </>
         )}
